@@ -1,0 +1,1 @@
+ssh -t pi@192.168.1.149 'cd iotPyScript; git fetch --all; git reset --hard origin/master; pip3 install -r requirements.txt; sudo systemctl restart iot-dnd.service;'
