@@ -1,6 +1,4 @@
-
 import time
-
 
 class Ora:
     def __init__(self, string):

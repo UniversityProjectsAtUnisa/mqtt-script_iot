@@ -1,6 +1,8 @@
 import paho.mqtt.client as mqtt
 import time
 from ora import Ora, Interval
+import locale
+locale.setlocale(locale.LC_TIME, "it_IT.UTF-8")
 
 
 enabled = False
