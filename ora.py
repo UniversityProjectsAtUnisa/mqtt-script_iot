@@ -1,4 +1,5 @@
-import time
+from datetime import datetime
+import pytz
 
 class Ora:
     def __init__(self, string):
@@ -37,8 +38,9 @@ class Ora:
 
     @classmethod
     def now(cls):
-        now = time.localtime()
-        return cls(f'{now.tm_hour}:{now.tm_min}')
+        rome = pytz.timezone('Europe/Rome')
+        now = datetime.now(rome).strftime('%H:%M')
+        return cls(now)
 
 
 class Interval:
